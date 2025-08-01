@@ -28,6 +28,11 @@ app.use(cors());
 app.use(express.json());
 app.use(morgan("dev"));
 
+app.get("/", (req, res) => {
+  res.send("🟢 Growing API is running!");
+});
+
+
 // Contoh route tes koneksi
 app.get("/ping", async (req, res) => {
   try {
